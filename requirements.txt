@@ -1,5 +1,4 @@
-python-dotenv
-jupyterlab
-ipywidgets
 beautifulsoup4
 ollama
+rich
+requests
