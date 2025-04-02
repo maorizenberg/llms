@@ -1,18 +1,35 @@
 import json
+import os
 import re
 import requests
 from bs4 import BeautifulSoup
 from rich.console import Console
 from rich.markdown import Markdown
-import ollama
+#import ollama
+from openai import OpenAI
+from dotenv import load_dotenv
 
-OLLAMA_API = "http://localhost:11434/api/chat"
+#OLLAMA_API = "http://localhost:11434/api/chat"
 HEADERS = {"Content-Type": "application/json"}
-MODEL = "llama3.2"
+#MODEL = "llama3.2"
 
+# Some websites need you to use proper headers when fetching them:
 headers = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36"
 }
+
+# Initialize and constants
+
+load_dotenv(override=True)
+api_key = os.getenv('OPENAI_API_KEY')
+
+if api_key and api_key.startswith('sk-proj-') and len(api_key)>10:
+    print("API key looks good so far")
+else:
+    print("There might be a problem with your API key? Please visit the troubleshooting notebook!")
+    
+MODEL = 'gpt-4o-mini'
+openai = OpenAI()
 
 
 class Website:
@@ -62,23 +79,17 @@ def get_links(url):
             ]
         }
         """
-    print('Use ollama to get relevant links')
-    response = ollama.chat(
+    print(f'Use {MODEL} to get relevant links')
+    response = openai.chat.completions.create(
         model=MODEL,
         messages=[
             {"role": "system", "content": link_system_prompt},
-            {"role": "user", "content": get_links_user_prompt(website)},
-        ],
+            {"role": "user", "content": get_links_user_prompt(website)}
+      ],
+        response_format={"type": "json_object"}
     )
-    result = response["message"]["content"]
-    # Skip the prefix of result and get only the data
-    match = re.search(r'({.*})', result, re.DOTALL)
-    if match:
-        json_str = match.group(1)
-        return json.loads(json_str)
-    else:
-        print("No JSON found in the text.")
-        return {}
+    result = response.choices[0].message.content
+    return json.loads(result)
 
 
 def get_all_details(url):
@@ -102,15 +113,15 @@ def create_brochure(company_name, url):
     system_prompt = "You are an assistant that analyzes the contents of several relevant pages from a company website \
 and creates a short brochure about the company for prospective customers, investors and recruits. Respond in markdown.\
 Include details of company culture, customers and careers/jobs if you have the information."
-    print('use ollama to create a brochure')
-    response = ollama.chat(
+    print(f'use {MODEL} to create a brochure')
+    response = openai.chat.completions.create(
         model=MODEL,
         messages=[
             {"role": "system", "content": system_prompt},
-            {"role": "user", "content": get_brochure_user_prompt(company_name, url)},
-        ],
+            {"role": "user", "content": get_brochure_user_prompt(company_name, url)}
+          ],
     )
-    result = response["message"]["content"]
+    result = response.choices[0].message.content
     console = Console()
     console.print(Markdown(result))
 

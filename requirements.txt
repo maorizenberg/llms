@@ -2,3 +2,5 @@ beautifulsoup4
 ollama
 rich
 requests
+openai
+python-dotenv
