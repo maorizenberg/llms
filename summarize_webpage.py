@@ -4,10 +4,6 @@ from rich.console import Console
 from rich.markdown import Markdown
 import ollama
 
-OLLAMA_API = "http://localhost:11434/api/chat"
-HEADERS = {"Content-Type": "application/json"}
-MODEL = "llama3.2"
-
 headers = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36"
 }
@@ -49,7 +45,7 @@ def display_summary(url):
         {"role": "user", "content": generate_user_prompt(website.title, website.text)},
     ]
     print('Getting summary')
-    response = ollama.chat(model=MODEL, messages=messages)
+    response = ollama.chat(model="llama3.2", messages=messages)
     summary = response["message"]["content"]
     console = Console()
     console.print(Markdown(summary))

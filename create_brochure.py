@@ -1,6 +1,5 @@
 import json
 import os
-import re
 import requests
 from bs4 import BeautifulSoup
 from rich.console import Console
