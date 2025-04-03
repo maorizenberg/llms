@@ -1,0 +1,89 @@
+system_prompt = "You are an assistant that analyzes the contents of several relevant pages from a company website \
+and creates a short brochure about the company for prospective customers, investors and recruits. Respond in markdown.\
+Include details of company culture, customers and careers/jobs if you have the information."
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃                                                     Hugging Face Brochure                                                      ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+                                                             About Us                                                             
+
+Welcome to Hugging Face – the AI community building the future. Our platform is where the machine learning community collaborates 
+on models, datasets, and applications. We are dedicated to empowering enthusiasts, researchers, and companies alike, offering     
+resources that make it easier to create, discover, and share the latest advancements in machine learning.                         
+
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+                                                          Our Offerings                                                           
+
+                                                              Models                                                              
+
+Explore a vast library with over 1 million models across various modalities including text, image, audio, and video. Some of the  
+trending models this week include:                                                                                                
+
+ • Qwen/Qwen2.5-Omni-7B                                                                                                           
+ • DeepSeek-V3-0324                                                                                                               
+ • SpatialLM-Llama-1B                                                                                                             
+
+                                                             Datasets                                                             
+
+Access 250,000+ datasets that support a wide array of machine learning tasks, providing a comprehensive resource for building     
+smarter AI applications.                                                                                                          
+
+                                                              Spaces                                                              
+
+Our collaborative environment allows users to create and run projects easily. With over 400,000 applications, you can host and    
+share your innovative ideas.                                                                                                      
+
+                                                       Enterprise Solutions                                                       
+
+With over 50,000 organizations utilizing Hugging Face's resources, we offer enterprise-grade services tailored for advanced AI    
+development, including:                                                                                                           
+
+ • Dedicated support                                                                                                              
+ • Enhanced security                                                                                                              
+ • Access control solutions                                                                                                       
+
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+                                                         Company Culture                                                          
+
+At Hugging Face, we foster a culture of collaboration and inclusivity. Our mission is grounded in community-driven development,   
+and we are committed to making machine learning accessible and enjoyable for everyone. Vertical integration of various aspects of 
+AI and an open-source ethos are at the heart of our operations, promoting transparency and shared learning.                       
+
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+                                                             Careers                                                              
+
+Join our growing team! We are constantly on the lookout for passionate individuals who share our enthusiasm for AI and machine    
+learning. Explore exciting career opportunities where you can contribute to innovative projects and be part of a dynamic          
+community.                                                                                                                        
+
+                                                        Why Work with Us?                                                         
+
+ • Open and collaborative work environment.                                                                                       
+ • Opportunities to work on cutting-edge technologies in AI.                                                                      
+ • Employee growth and continuous learning supported through mentorship and training programs.                                    
+
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+                                                           Get Involved                                                           
+
+Whether you are a developer, researcher, or AI enthusiast, there’s a spot for you in our community!                               
+
+ • Follow us on our social media for updates: GitHub, Twitter, LinkedIn, Discord                                                  
+ • Sign up for our platform to explore, create, and collaborate.                                                                  
+
+Join Hugging Face and be part of the AI revolution! 
+
+
+
+
+result links (one-shot):
+{'links': [{'type': 'about page', 'url': 'https://huggingface.co/huggingface'}, {'type': 'careers page', 'url': 'https://apply.workable.com/huggingface/'}, {'type': 'company page', 'url': 'https://huggingface.co/enterprise'}, {'type': 'pricing page', 'url': 'https://huggingface.co/pricing'}, {'type': 'blog page', 'url': 'https://huggingface.co/blog'}, {'type': 'community forum', 'url': 'https://discuss.huggingface.co'}, {'type': 'GitHub page', 'url': 'https://github.com/huggingface'}, {'type': 'social media page', 'url': 'https://twitter.com/huggingface'}, {'type': 'LinkedIn page', 'url': 'https://www.linkedin.com/company/huggingface/'}]}
+
+result links (two-shots):
+{'links': [{'type': 'about page', 'url': 'https://huggingface.co/about'}, {'type': 'enterprise page', 'url': 'https://huggingface.co/enterprise'}, {'type': 'pricing page', 'url': 'https://huggingface.co/pricing'}, {'type': 'careers page', 'url': 'https://apply.workable.com/huggingface/'}, {'type': 'blog', 'url': 'https://huggingface.co/blog'}, {'type': 'contact page', 'url': 'https://huggingface.co/contact'}, {'type': 'community page', 'url': 'https://discuss.huggingface.co'}, {'type': 'GitHub page', 'url': 'https://github.com/huggingface'}, {'type': 'Twitter page', 'url': 'https://twitter.com/huggingface'}, {'type': 'LinkedIn page', 'url': 'https://www.linkedin.com/company/huggingface/'}]}

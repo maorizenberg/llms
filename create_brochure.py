@@ -72,13 +72,22 @@ def get_links(url):
     such as links to an About page, or a Company page, or Careers/Jobs pages.\n"
     link_system_prompt += "You should respond in JSON as in this example:"
     link_system_prompt += """
-        {
-            "links": [
-                {"type": "about page", "url": "https://full.url/goes/here/about"},
-                {"type": "careers page": "url": "https://another.full.url/careers"}
-            ]
-        }
-        """
+            {
+                "links": [
+                    {"type": "about page", "url": "https://full.url/goes/here/about"},
+                    {"type": "careers page", "url": "https://another.full.url/careers"}
+                ]
+            }
+            """
+    link_system_prompt += "Another example:"
+    link_system_prompt += """
+            {
+                "links": [
+                    {"type": "company overview", "url": "https://full.url/goes/here/company"},
+                    {"type": "contact page", "url": "https://another.full.url/contact"}
+                ]
+            }
+            """
     print(f'Use {MODEL} to get relevant links')
     response = openai.chat.completions.create(
         model=MODEL,
