@@ -4,3 +4,6 @@ rich
 requests
 openai
 python-dotenv
+gradio
+pillow
+pydub
