@@ -183,3 +183,4 @@ products_vectorstore/
 week4/optimized
 week4/simple
 .vscode/
+*.cpp
