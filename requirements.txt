@@ -12,3 +12,10 @@ transformers
 torch
 bitsandbytes
 accelerate
+langchain
+langchain-openai
+langchain-chroma
+langchain-community
+langchain-huggingface
+sentence-transformers
+langchain-ollama
