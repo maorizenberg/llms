@@ -20,3 +20,6 @@ langchain-huggingface
 sentence-transformers
 langchain-ollama
 datasets
+peft
+modal
+ollama
